@@ -1,0 +1,29 @@
+<h1>Trivia!!</h1>
+<%= session["current_question"] %>
+
+<% if session["question_options"] && session["show_options"] %>
+  <ul>
+    <% session["question_options"].each do |answer|%>
+      <li>
+        <%= answer %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>
+  <a href="/answer">Get Answer</a>
+</p>
+<p>
+  <a href="/">New Question</a>
+</p>
+
+<% if session["question_options"] %>
+  <p>
+    <a href="/options">Show Options</a>
+  </p>
+<% end %>
+
+<p>
+  <%= @answer if @answer %>
+</p>
