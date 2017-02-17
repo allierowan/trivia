@@ -7,3 +7,4 @@ gem "pry"
 gem "activesupport"
 gem "webmock"
 gem "minitest"
+gem 'sinatra'
